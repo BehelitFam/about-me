@@ -131,6 +131,7 @@ if (guessCount === 5) {
 } else if (guessCount >= 4) {
     knowMe = ' Um.... do we know each other?'
 }
+
 console.log('knowMe is \'' + knowMe + '\'');
 
 alert('You guessed ' + guessCount + ' out of 5 questions right!' + knowMe);
