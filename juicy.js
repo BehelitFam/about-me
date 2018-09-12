@@ -3,13 +3,14 @@
 
 //Creates a counter for correct answers
 var guessCount = 0;
+console.log('guessCount is ' + guessCount);
 
 //Greeting message
 alert('Hey there! I\'m Rick. You don\'t know me - yet. See if you can guess a little about who I am!');
 
 //Prompts user's name
 var name = prompt('But first - what is YOUR name?');
-console.log('User entered ' + name);
+console.log('User entred their name as ' + name);
 
 alert('Nice to meet you, ' + name + '. Let\'s test your guessing abilities.');
 
@@ -30,6 +31,8 @@ if (crustPref === 'Y' || crustPref === "YES") {
     guessCount ++;
 }
 
+console.log('guessCount is ' + guessCount);
+
 alert(crustResp);
 
 //Pet preference prompt
@@ -48,6 +51,8 @@ if (petPref === 'Y' || petPref === 'YES') {
     console.log('User thinks I don\'t love kitties');
     petResp = 'Do you think I\'m some kind of monster, ' + name + '?';
 }
+
+console.log('guessCount is ' + guessCount);
 
 alert(petResp);
 
@@ -68,10 +73,12 @@ if (pizzaPref === 'Y' || pizzaPref === 'YES') {
     guessCount ++;
 }
 
+console.log('guessCount is ' + guessCount);
+
 alert(pizzaResp);
 
 //Skate pref
-var skatePref = prompt('Do I look cool enough to be a skateboarder?');
+var skatePref = prompt('Do I look cool enough to be a RADICAL SKATE PUNK?');
 skatePref = skatePref.toUpperCase();
 
 var skateResp;
@@ -80,14 +87,16 @@ console.log('User entered ' + skatePref);
 
 if (skatePref === 'Y' || skatePref === 'YES') { 
     console.log('User guessed I\'m cool');
-    pizzaResp = 'Correct!';
+    pizzaResp = 'Correct,';
     guessCount ++;
 } else {
     console.log('User thinks I don\'t board');
-    pizzaResp = 'I do in fact skate!';
+    pizzaResp = 'Nope,';
 }
 
-alert(pizzaResp + ' Well, sorta. I can only longboard. No jump tricks, sadly. Guess I don\'t really know about the cool part, to be honest.');
+console.log('guessCount is ' + guessCount);
+
+alert(pizzaResp + ' I do skate! Well, sorta. I can only longboard. No jump tricks, sadly. Guess I don\'t really know about the cool part, to be honest.');
 
 //Can I code?
 var canCode = prompt('Do I think I have what it takes to be a MASTER CODEWIZARD?');
@@ -95,7 +104,7 @@ canCode = canCode.toUpperCase();
 
 var codeResp;
 
-console.log(canCode);
+console.log('User guessed ' + canCode);
 
 if (canCode === 'Y' || canCode === 'YES') {
     console.log('User thinks I think can do it!');
