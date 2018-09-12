@@ -1,20 +1,24 @@
 'use strict';
 
+/* Greets user, asks their name, prompts them to answer 5 yes/no questions about my interests, and creates alerts to tell
+them if they've answered correctly. Records the number of correct answers and sends a final alert telling the user how 
+many questions they have guessed correctly. 
+*/
 
 //Creates a counter for correct answers
 var guessCount = 0;
 console.log('guessCount is ' + guessCount);
 
-//Greeting message
+//Greeting message 
 alert('Hey there! I\'m Rick. You don\'t know me - yet. See if you can guess a little about who I am!');
 
-//Prompts user's name
 var name = prompt('But first - what is YOUR name?');
 console.log('User entred their name as ' + name);
 
 alert('Nice to meet you, ' + name + '. Let\'s test your guessing abilities.');
 
-//Prompts user's crust preference, determines response and raises extermination count if user removes sandwich crusts
+
+// Prompts user to guess whether I like crusts on my sandwich
 var crustPref = prompt('Do I prefer to remove the crust from a sandwich?');
 crustPref = crustPref.toUpperCase();
 
@@ -35,7 +39,7 @@ console.log('guessCount is ' + guessCount);
 
 alert(crustResp);
 
-//Pet preference prompt
+// Prompts user to guess whether I like cats
 var petPref = prompt('Here\'s an easy one: Do I love kitties?');
 petPref = petPref.toUpperCase();
 
@@ -56,7 +60,7 @@ console.log('guessCount is ' + guessCount);
 
 alert(petResp);
 
-//Determines user's pizza preferences, raises extermination count if user does not like pineapple
+// Prompts user to guess whether I like pineapple pizza
 var pizzaPref = prompt('Next question, ' + name + '. Do I hate pineapple on pizza?');
 pizzaPref = pizzaPref.toUpperCase();
 
@@ -77,8 +81,8 @@ console.log('guessCount is ' + guessCount);
 
 alert(pizzaResp);
 
-//Skate pref
-var skatePref = prompt('Do I look cool enough to be a RADICAL SKATE PUNK?');
+//Prompts user to guess whether I skate
+var skatePref = prompt('Do I look cool enough to be a totally cool skater guy?');
 skatePref = skatePref.toUpperCase();
 
 var skateResp;
@@ -96,10 +100,10 @@ if (skatePref === 'Y' || skatePref === 'YES') {
 
 console.log('guessCount is ' + guessCount);
 
-alert(pizzaResp + ' I do skate! Well, sorta. I can only longboard. No jump tricks, sadly. Guess I don\'t really know about the cool part, to be honest.');
+alert(pizzaResp + ' I do skate! Well, sorta. I can only longboard. No jump tricks, sadly. And I\'m still working on the cool part, to be honest.');
 
-//Can I code?
-var canCode = prompt('Do I think I have what it takes to be a MASTER CODEWIZARD?');
+// Prompts user to guess whether I believe in my professional future
+var canCode = prompt('Do I think, that I think, that I have what it takes to be a MASTER CODEWIZARD?');
 canCode = canCode.toUpperCase();
 
 var codeResp;
@@ -112,20 +116,20 @@ if (canCode === 'Y' || canCode === 'YES') {
     guessCount++;
 } else {
     console.log('User doesn\'t think I believe in myself');
-    codeResp = 'HA! WRONG! I BELIEVE IN MYSELF! OR SOMETHING!';
+    codeResp = 'HA! WRONG! I BELIEVE IN MYSEEEEELF!';
 }
 
 alert(codeResp);
 
 console.log('guessCount is ' + guessCount);
 
-//Gives user an alert telling them how many guesses they got right
+// Gives user an alert telling them how many guesses they got right
 var knowMe = '';
 
-if (guessCount > 4) {
-    knowMe = ' Nice guessing!';
-} else if (guessCount === 5) {
-    knowMe = ' You a psychic or something? Or just my favorite fan?'
+if (guessCount === 5) {
+    knowMe = ' PERFECTION!';
+} else if (guessCount >= 4) {
+    knowMe = ' Um.... do we know each other?'
 }
 console.log('knowMe is \'' + knowMe + '\'');
 
